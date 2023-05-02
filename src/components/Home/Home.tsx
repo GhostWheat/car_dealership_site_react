@@ -1,11 +1,11 @@
 import React from 'react';
-import {styled} from '@mui/system';
-import {Button} from '@mui/material';
-import splashImage from '../../assets/images/cash-macanaya-_5lTTNE2L5I-unsplash.jpg'
+import { styled } from '@mui/system';
+import { Button } from '@mui/material';
+import unsplashImage from '../../assets/images/cash-macanaya-_5lTTNE2L5I-unsplash.jpg'
 
 
-interface Props{
-    title:string;
+interface Props {
+    title: string;
 }
 
 // export const Home = ( props:Props ) => {
@@ -17,8 +17,8 @@ interface Props{
 // Create Styled Components with styled-components
 
 const Root = styled('div')({
-    padding:0,
-    margin:0,
+    padding: 0,
+    margin: 0,
 })
 
 const NavbarContainer = styled('div')({
@@ -26,18 +26,6 @@ const NavbarContainer = styled('div')({
     justifyContent: 'space-between',
     alignItems: 'center',
     backgroundColor: 'lightseagreen',
-})
-
-const Logo = styled('div')({
-    marginRight: '0.5em',
-    marginLeft: '0.5em',
-})
-
-const LogoA = styled('a')({
-    color: 'black',
-    listStyle: 'none',
-    textTransform: 'uppercase',
-    textDecoration: 'underline dotted'
 })
 
 const NavList = styled('ul')({
@@ -53,12 +41,40 @@ const NavA = styled('a')({
     textDecoration: 'none',
 })
 
-const Main = styled('main')({
-    backgroundImage: `linear gradient(green,green,url(${splashImage}))`
+const Logo = styled('div')({
+    marginRight: '0.5em',
+    marginLeft: '0.5em',
 })
 
-export const Home = (props:Props) => {
-    return(
+const LogoA = styled('a')({
+    color: 'black',
+    listStyle: 'none',
+    textTransform: 'uppercase',
+    textDecoration: 'underline dotted'
+})
+
+const AcctDiv = styled('div')({
+    marginRight: '0.5em',
+    marginLeft: '0.5em',
+})
+
+const AcctDropdown = styled('h1')({
+    backgroundColor: 'blue',
+})
+
+const Main = styled('main')({
+    // backgroundImage: `url(${unsplashImage})`,
+    // width: '100%',
+    // height: '100%',
+    // backgroundSize: 'cover',
+    // backgroundRepeat: 'no-repeat',
+    // backgroundPosition: 'center',
+    // position: 'absolute',
+    backgroundColor: 'green'
+})
+
+export const Home = (props: Props) => {
+    return (
         <Root>
             <NavbarContainer>
                 <NavList>
@@ -72,12 +88,17 @@ export const Home = (props:Props) => {
                     <LogoA href='#'>COMPANYBRANDWEBSITE</LogoA>
                 </Logo>
 
-
+                <AcctDiv>
+                    <AcctDropdown>
+                        My Account
+                    </AcctDropdown>
+                </AcctDiv>
 
             </NavbarContainer>
-
-
-
+        
+        <Main>
+            Hello
+        </Main>
 
 
         </Root>
