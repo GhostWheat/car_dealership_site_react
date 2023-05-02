@@ -63,13 +63,13 @@ const AcctDropdown = styled('h1')({
 })
 
 const Main = styled('main')({
-    // backgroundImage: `url(${unsplashImage})`,
-    // width: '100%',
-    // height: '100%',
-    // backgroundSize: 'cover',
-    // backgroundRepeat: 'no-repeat',
-    // backgroundPosition: 'center',
-    // position: 'absolute',
+    backgroundImage: `url(${unsplashImage})`,
+    width: '100%',
+    height: '100%',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
+    position: 'absolute',
     backgroundColor: 'green'
 })
 
