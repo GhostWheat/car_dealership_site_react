@@ -19,13 +19,22 @@ interface Props {
 const Root = styled('div')({
     padding: 0,
     margin: 0,
+
+    backgroundImage: `linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url(${unsplashImage})`,
+    width: '100%',
+    height: '100%',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
+    position: 'absolute',
+    backgroundColor: 'linen',
 })
 
 const NavbarContainer = styled('div')({
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    backgroundColor: 'lightseagreen',
+    // backgroundColor: 'clear',
 })
 
 const NavList = styled('ul')({
@@ -59,18 +68,11 @@ const AcctDiv = styled('div')({
 })
 
 const AcctDropdown = styled('h1')({
-    backgroundColor: 'blue',
+    backgroundColor: 'cyan',
 })
 
 const Main = styled('main')({
-    backgroundImage: `url(${unsplashImage})`,
-    width: '100%',
-    height: '100%',
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center',
-    position: 'absolute',
-    backgroundColor: 'green'
+
 })
 
 export const Home = (props: Props) => {
