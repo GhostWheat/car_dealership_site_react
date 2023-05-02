@@ -20,7 +20,7 @@ const Root = styled('div')({
     padding: 0,
     margin: 0,
 
-    backgroundImage: `linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url(${unsplashImage})`,
+    backgroundImage: `linear-gradient(to bottom, rgba(204,255,255, 0.8) 2%, rgba(204,255,255, 0.8) 2%, rgba(204,255,255, 0.75) 2%, rgba(204,255,255, 0.75) 2%, rgba(0,0,0,0) 40%, rgba(0,0,0, .4)), url(${unsplashImage})`,
     width: '100%',
     height: '100%',
     backgroundSize: 'cover',
