@@ -1,5 +1,5 @@
 {
-  "name": "car_dealership",
+  "name": "car_inventory",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
