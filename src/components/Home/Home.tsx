@@ -68,7 +68,7 @@ const AcctDiv = styled('div')({
 })
 
 const AcctDropdown = styled('h1')({
-    backgroundColor: 'cyan',
+    // backgroundColor: 'cyan',
 })
 
 const Main = styled('main')({
@@ -100,6 +100,7 @@ export const Home = (props: Props) => {
         
         <Main>
             Hello
+            <Button></Button>
         </Main>
 
 
