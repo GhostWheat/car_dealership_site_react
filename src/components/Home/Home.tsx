@@ -2,7 +2,7 @@ import React from 'react';
 import { styled } from '@mui/system';
 import { Button } from '@mui/material';
 import unsplashImage from '../../assets/images/cash-macanaya-_5lTTNE2L5I-unsplash.jpg'
-
+import { Link } from 'react-router-dom';
 
 interface Props {
     title: string;
@@ -43,7 +43,7 @@ const NavList = styled('ul')({
     display: 'flex',
 })
 
-const NavA = styled('a')({
+const NavA = styled(Link)({
     display: 'block',
     padding: '1em',
     color: 'lightgrey',
@@ -80,14 +80,14 @@ export const Home = (props: Props) => {
         <Root>
             <NavbarContainer>
                 <NavList>
-                    <NavA href='#'>Home</NavA>
-                    <NavA href='#'>About</NavA>
-                    <NavA href='#'>My Dashboard</NavA>
-                    <NavA href='#'>#</NavA>
+                    <NavA to='/'>Home</NavA>
+                    <NavA to='About'>About</NavA>
+                    <NavA to='/dashboard'>My Dashboard</NavA>
+                    <NavA to='/signin'>#</NavA>
                 </NavList>
 
                 <Logo>
-                    <LogoA href='#'>COMPANYBRANDWEBSITE</LogoA>
+                    <LogoA href='/'>COMPANYBRANDWEBSITE</LogoA>
                 </Logo>
 
                 <AcctDiv>
