@@ -3,6 +3,7 @@ import { styled } from '@mui/system';
 import { Button } from '@mui/material';
 import unsplashImage from '../../assets/images/cash-macanaya-_5lTTNE2L5I-unsplash.jpg'
 import { Link } from 'react-router-dom';
+import { MarginRounded } from '@mui/icons-material';
 
 interface Props {
     title: string;
@@ -19,7 +20,7 @@ interface Props {
 const Root = styled('div')({
     padding: 0,
     margin: 0,
-    backgroundImage: `linear-gradient(to bottom, rgba(204,255,255, 0.8) 2%, rgba(204,255,255, 0.8) 2%, rgba(204,255,255, 0.75) 2%, rgba(204,255,255, 0.75) 2%, rgba(0,0,0,0) 40%, rgba(0,0,0, .4)), url(${unsplashImage})`,
+    backgroundImage: `linear-gradient(to bottom, rgba(10,133,203, 0.5) 5.5%, rgba(204,255,255, 0.5) 6%, rgba(204,255,255, 0.5) 6.3%, rgba(204,255,255, 0) 6.5%, rgba(0,0,0,0) 0%, rgba(0,0,0, .3) ), url(${unsplashImage})`,
     width: '100%',
     height: '100%',
     backgroundSize: 'cover',
@@ -89,6 +90,7 @@ const MainText = styled('div')({
     left: '50%',
     transform: 'translate(-50%, -50%)',
     color: 'white'
+
 })
 
 export const Home = (props: Props) => {
@@ -115,10 +117,10 @@ export const Home = (props: Props) => {
             </NavbarContainer>
 
             <Main>
-                <MainText>
+                <MainText id="maintext">
                     <h1>{props.title}</h1>
                     <p>CAR IS GOOD</p>
-                    <Button color='inherit' variant='outlined'><i>GO TO CARS</i></Button>
+                    <Button sx={{marginTop: '10px',boxShadow: '1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000'}} color='inherit' variant='outlined'><i>GO TO CARS</i></Button>
                 </MainText>
             </Main>
 
