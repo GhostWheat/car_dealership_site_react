@@ -19,7 +19,6 @@ interface Props {
 const Root = styled('div')({
     padding: 0,
     margin: 0,
-
     backgroundImage: `linear-gradient(to bottom, rgba(204,255,255, 0.8) 2%, rgba(204,255,255, 0.8) 2%, rgba(204,255,255, 0.75) 2%, rgba(204,255,255, 0.75) 2%, rgba(0,0,0,0) 40%, rgba(0,0,0, .4)), url(${unsplashImage})`,
     width: '100%',
     height: '100%',
@@ -27,7 +26,7 @@ const Root = styled('div')({
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
     position: 'absolute',
-    backgroundColor: 'linen',
+    // backgroundColor: 'linen',
 })
 
 const NavbarContainer = styled('div')({
@@ -73,6 +72,23 @@ const AcctDropdown = styled('h1')({
 
 const Main = styled('main')({
 
+    // backgroundImage: `linear-gradient(to bottom, rgba(204,255,255, 0.8) 2%, rgba(204,255,255, 0.8) 2%, rgba(204,255,255, 0.75) 2%, rgba(204,255,255, 0.75) 2%, rgba(0,0,0,0) 40%, rgba(0,0,0, .4)), url(${unsplashImage})`,
+    width: '100%',
+    height: '100%',
+    // backgroundSize: 'cover',
+    // backgroundRepeat: 'no-repeat',
+    // backgroundPosition: 'center',
+    // position: 'absolute',
+    // backgroundColor: 'linen',
+})
+
+const MainText = styled('div')({
+    textAlign: 'center',
+    position: 'relative',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    color: 'white'
 })
 
 export const Home = (props: Props) => {
@@ -97,11 +113,14 @@ export const Home = (props: Props) => {
                 </AcctDiv>
 
             </NavbarContainer>
-        
-        <Main>
-            Hello
-            <Button></Button>
-        </Main>
+
+            <Main>
+                <MainText>
+                    <h1>{props.title}</h1>
+                    <p>CAR IS GOOD</p>
+                    <Button color='inherit' variant='outlined'><i>GO TO CARS</i></Button>
+                </MainText>
+            </Main>
 
 
         </Root>
