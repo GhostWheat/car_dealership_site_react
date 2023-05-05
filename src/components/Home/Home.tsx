@@ -35,11 +35,11 @@ const Root = styled('div')({
 })
 
 const NavbarContainer = styled('div')({
-    minHeight: '50px',
+    minHeight: '64px',
     backgroundColor: 'rgba(10,133,203, 0.5)',
     borderBottom: '3px rgba(204,255,255, 0.4) groove',
     display: 'flex',
-    justifyContent: 'space-between',
+    justifyContent:'space-between',
     alignItems: 'center',
     // backgroundColor: 'clear',
 })
@@ -75,7 +75,9 @@ const Logo = styled('div')({
     marginRight: '0.5em',
     marginLeft: '0.5em',
     border: 'solid white 1px',
-    borderRadius: '100%'
+    borderRadius: '100%',
+    position: 'absolute',
+    left: '50%'
 })
 
 const LogoA = styled('a')({
@@ -128,9 +130,7 @@ export const Home = (props: Props) => {
             <NavbarContainer>
                 <NavList>
                     <NavA to='/'>Home</NavA>
-
                     <NavA to='/dashboard'>My Dashboard</NavA>
-                    <NavA to='#'>About</NavA>
                     <NavA to='/signin'>Sign In</NavA>
                 </NavList>
 

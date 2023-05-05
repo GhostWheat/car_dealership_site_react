@@ -3,8 +3,13 @@ import ReactDOM from 'react-dom/client';
 import './styles.css';
 import reportWebVitals from './reportWebVitals';
 
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import { Home, Dashboard, SignIn } from './components';
+import { theme } from './Theme/themes'
+import { ThemeProvider } from '@mui/material/styles'
+
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Home, Dashboard, SignIn, Account } from './components';
+
+
 
 
 const root = ReactDOM.createRoot(
@@ -13,14 +18,18 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <Router>
+    <ThemeProvider theme={theme}>
+      <Router>
         <Routes>
-          <Route path='/' element={<Home title  ={'Car Inventory'}/>} />
+          <Route path='/' element={<Home title={'Car Inventory'} />} />
           <Route path='/dashboard' element={<Dashboard />} />
           <Route path='/signin' element={<SignIn />} />
+          <Route path='/account' element={<Account />} />
         </Routes>
       </Router>
+    </ThemeProvider>
   </React.StrictMode>
+
 );
 
 // If you want to start measuring performance in your app, pass a function
