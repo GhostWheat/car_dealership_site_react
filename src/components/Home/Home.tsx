@@ -8,7 +8,7 @@ import ScaledText from 'react-scale-text';
 
 
 interface Props {
-    title: string;
+  title: string;
 }
 
 // export const Home = ( props:Props ) => {
@@ -20,140 +20,145 @@ interface Props {
 // Create Styled Components with styled-components
 
 const Root = styled('div')({
-    padding: 0,
-    margin: 0,
-    backgroundImage: `linear-gradient(to bottom, rgba(10,133,203, 0.5),  rgba(0,0,0,0) 0%, rgba(0,0,0, .3) ), url(${unsplashImage})`,
-    // backgroundImage: `linear-gradient(to bottom, rgba(10,133,203, 0.5) 5.5%, rgba(204,255,255, 0.5) 6%, rgba(204,255,255, 0.5) 6.3%, rgba(204,255,255, 0) 6.5%, rgba(0,0,0,0) 0%, rgba(0,0,0, .3) ), url(${unsplashImage})`,
-    // backgroundImage: `linear-gradient(to bottom, rgba(204,255,255, 0.8) 2%, rgba(204,255,255, 0.8) 2%, rgba(204,255,255, 0.75) 2%, rgba(204,255,255, 0.75) 2%, rgba(0,0,0,0) 40%, rgba(0,0,0, .4)), url(${unsplashImage})`,
-    width: '100%',
-    height: '100%',
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center',
-    position: 'absolute',
-    // backgroundColor: 'linen',
+  padding: 0,
+  margin: 0,
+  overflow: 'clip',
+  backgroundImage: `linear-gradient(to bottom, rgba(10,133,203, 0.5),  rgba(0,0,0,0) 0%, rgba(0,0,0, .3) ), url(${unsplashImage})`,
+  // backgroundImage: `linear-gradient(to bottom, rgba(10,133,203, 0.5) 5.5%, rgba(204,255,255, 0.5) 6%, rgba(204,255,255, 0.5) 6.3%, rgba(204,255,255, 0) 6.5%, rgba(0,0,0,0) 0%, rgba(0,0,0, .3) ), url(${unsplashImage})`,
+  // backgroundImage: `linear-gradient(to bottom, rgba(204,255,255, 0.8) 2%, rgba(204,255,255, 0.8) 2%, rgba(204,255,255, 0.75) 2%, rgba(204,255,255, 0.75) 2%, rgba(0,0,0,0) 40%, rgba(0,0,0, .4)), url(${unsplashImage})`,
+  width: '100%',
+  height: '100%',
+  backgroundSize: 'cover',
+  backgroundRepeat: 'no-repeat',
+  backgroundPosition: 'center',
+  position: 'absolute',
+  // backgroundColor: 'linen',
 })
 
 const NavbarContainer = styled('div')({
-    minHeight: '64px',
-    backgroundColor: 'rgba(10,133,203, 0.5)',
-    borderBottom: '3px rgba(204,255,255, 0.4) groove',
-    display: 'flex',
-    justifyContent:'space-between',
-    alignItems: 'center',
-    // backgroundColor: 'clear',
+  minHeight: '64px',
+  backgroundColor: 'rgba(10,133,203, 0.5)',
+  borderBottom: '3px rgba(204,255,255, 0.4) groove',
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItems: 'center',
+  // backgroundColor: 'clear',
 })
 
 const NavList = styled('ul')({
-    listStyle: 'none',
-    textTransform: 'uppercase',
-    display: 'flex',
+  listStyle: 'none',
+  textTransform: 'uppercase',
+  display: 'flex',
 })
 
 const NavA = styled(Link)({
-    display: 'flex',
-    padding: '0.5em',
-    color: 'white',
-    textDecoration: 'none',
-    textAlign: 'center',
-    fontSize: 12,
-    // justifyItems: 'end',
-    // alignContent: 'baseline',
-    alignItems: 'center',
-    justifyContent: 'center',
-    // border: '1px solid black'
-    // maxHeight: '10px'
+  display: 'flex',
+  padding: '0.5em',
+  color: 'white',
+  textDecoration: 'none',
+  textAlign: 'center',
+  fontSize: 12,
+  // justifyItems: 'end',
+  // alignContent: 'baseline',
+  alignItems: 'center',
+  justifyContent: 'center',
+  // border: '1px solid black'
+  // maxHeight: '10px'
 })
 
 const Logo = styled('div')({
-    height: '60px',
-    width: '60px',
-    display:'flex',
-    textAlign: 'center',
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginRight: '0.5em',
-    marginLeft: '0.5em',
-    border: 'solid white 1px',
-    borderRadius: '100%',
-    position: 'absolute',
-    left: '50%'
+  height: '60px',
+  width: '60px',
+  display: 'flex',
+  textAlign: 'center',
+  alignItems: 'center',
+  justifyContent: 'center',
+  marginRight: '0.5em',
+  marginLeft: '0.5em',
+  border: 'solid white 1px',
+  borderRadius: '100%',
+  position: 'absolute',
+  left: '50%'
 })
 
 const LogoA = styled('a')({
-    color: 'white',
-    listStyle: 'none',
-    fontSizeAdjust: 'inherit',
-    textTransform: 'uppercase',
-    textDecoration: 'none'
+  color: 'white',
+  listStyle: 'none',
+  fontSizeAdjust: 'inherit',
+  textTransform: 'uppercase',
+  textDecoration: 'none'
 })
 
 const AcctDiv = styled('div')({
-    marginRight: '0.5em',
-    marginLeft: '0.5em',
+  marginRight: '0.5em',
+  marginLeft: '0.5em',
 })
 
 const AcctLink = styled(Link)({
-    // backgroundColor: 'cyan',
-    color: 'white',
-    fontSize: 12,
-    textTransform: 'uppercase',
-    textDecoration: 'none'
+  // backgroundColor: 'cyan',
+  color: 'white',
+  fontSize: 12,
+  textTransform: 'uppercase',
+  textDecoration: 'none'
 })
 
 const Main = styled('main')({
-    // backgroundImage: `linear-gradient(to bottom, rgba(10,133,203, 0.5) 5.5%, rgba(204,255,255, 0.5) 6%, rgba(204,255,255, 0.5) 6.3%, rgba(204,255,255, 0) 6.5%, rgba(0,0,0,0) 0%, rgba(0,0,0, .3) ), url(${unsplashImage})`,
-    // backgroundImage: `linear-gradient(to bottom, rgba(204,255,255, 0.8) 2%, rgba(204,255,255, 0.8) 2%, rgba(204,255,255, 0.75) 2%, rgba(204,255,255, 0.75) 2%, rgba(0,0,0,0) 40%, rgba(0,0,0, .4)), url(${unsplashImage})`,
-    borderTop: '3px rgba(204,255,255, 0.4) ridge',
-    width: '100%',
-    height: '100%',
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center',
-    position: 'absolute',
-    // backgroundColor: 'linen',
+  // backgroundImage: `linear-gradient(to bottom, rgba(10,133,203, 0.5) 5.5%, rgba(204,255,255, 0.5) 6%, rgba(204,255,255, 0.5) 6.3%, rgba(204,255,255, 0) 6.5%, rgba(0,0,0,0) 0%, rgba(0,0,0, .3) ), url(${unsplashImage})`,
+  // backgroundImage: `linear-gradient(to bottom, rgba(204,255,255, 0.8) 2%, rgba(204,255,255, 0.8) 2%, rgba(204,255,255, 0.75) 2%, rgba(204,255,255, 0.75) 2%, rgba(0,0,0,0) 40%, rgba(0,0,0, .4)), url(${unsplashImage})`,
+  borderTop: '3px rgba(204,255,255, 0.4) ridge',
+  width: '100%',
+  height: '100%',
+  backgroundSize: 'cover',
+  backgroundRepeat: 'no-repeat',
+  backgroundPosition: 'center',
+  position: 'absolute',
+  translate: 0, 
+  // backgroundColor: 'linen',
 })
 
 const MainText = styled('div')({
-    textAlign: 'center',
-    position: 'relative',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    color: 'white'
+  textAlign: 'center',
+  position: 'relative',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  color: 'white'
 
 })
 
 export const Home = (props: Props) => {
-    return (
-        <Root>
-            <NavbarContainer>
-                <NavList>
-                    <NavA to='/'>Home</NavA>
-                    <NavA to='/dashboard'>My Dashboard</NavA>
-                    <NavA to='/signin'>Sign In</NavA>
-                    <NavA to='/signup'>Sign Up</NavA>
-                </NavList>
+  return (
+    <Root>
+      <NavbarContainer>
+        <NavList>
+          <NavA to='/'>Home</NavA>
+          <NavA to='/dashboard'>My Dashboard</NavA>
+          <NavA to='/signin'>Sign In</NavA>
+          <NavA to='/signup'>Sign Up</NavA>
+        </NavList>
 
-                <Logo>
-                    <LogoA href='/'>BRAND</LogoA>
-                </Logo>
+        <Logo>
+          <LogoA href='/'>BRAND</LogoA>
+        </Logo>
 
-                <AcctDiv>
-                    {/* <AcctLink to='/account'>My Account</AcctLink> */}
-                </AcctDiv>
+        <AcctDiv>
+          {/* <AcctLink to='/account'>My Account</AcctLink> */}
+        </AcctDiv>
 
-            </NavbarContainer>
+      </NavbarContainer>
 
-            <Main>
-                <MainText id="maintext">
-                    <h1>{props.title}</h1>
-                    <p>CAR IS GOOD</p>
-                    <Button sx={{ marginTop: '10px', boxShadow: '1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000' }} color='inherit' variant='outlined'><i>GO TO CARS</i></Button>
-                </MainText>
-            </Main>
+      <Main>
+        <MainText id="maintext">
+          <h1>{props.title}</h1>
+          <p>CAR IS GOOD</p>
+          <Button sx={{
+            marginTop: '10px',
+            boxShadow: '1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000'
+          }} color='inherit' variant='outlined' component={Link} to='/dashboard'><i>GO TO CARS</i></Button>
+        </MainText>
+      </Main>
 
 
-        </Root>
-    )
+    </Root>
+  )
 }
