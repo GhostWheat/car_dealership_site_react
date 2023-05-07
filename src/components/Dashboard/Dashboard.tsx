@@ -23,7 +23,7 @@ import { ChevronRight, ChevronLeft } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
 import { theme } from '../../Theme/themes';
 import { DataTable } from '../DataTable';
-import { DroneForm } from '../CarForm'
+import { CarForm } from '../CarForm'
 import { text } from 'stream/consumers';
 import { getStyleValue, style } from '@mui/system';
 
@@ -151,14 +151,14 @@ export const Dashboard = () => {
                         <MenuIcon />
                     </IconButton>
                     <Typography variant='h6' noWrap>Dashboard</Typography>
-                    <Button sx={myStyles.toolbarButton} color='warning' onClick={handleDialogOpen}>Create New Drone</Button>
+                    <Button sx={myStyles.toolbarButton} color='warning' onClick={handleDialogOpen}>Create New Car</Button>
 
                     {/* dialog popup begins here */}
                     <Dialog open={dialogOpen} onClose={handleDialogClose} aria-labelledby='form-dialog-title'>
-                        <DialogTitle id='form-dialog-title'>Add New Drone</DialogTitle>
+                        <DialogTitle id='form-dialog-title'>Add New Car</DialogTitle>
                         <DialogContent>
-                            <DialogContentText>Enter drone information below</DialogContentText>
-                            <DroneForm />
+                            <DialogContentText>Enter Car information below</DialogContentText>
+                            <CarForm />
                         </DialogContent>
                         <DialogActions>
                             <Button onClick={handleDialogClose} color='primary'>Cancel</Button>

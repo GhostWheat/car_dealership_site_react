@@ -1,5 +1,4 @@
-export * from './Dashboard'
-export * from './Account'
+export * from './CarForm'
 export * from './Dashboard'
 export * from './Home'
 export * from './SignIn'
