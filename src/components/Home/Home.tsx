@@ -132,6 +132,7 @@ export const Home = (props: Props) => {
                     <NavA to='/'>Home</NavA>
                     <NavA to='/dashboard'>My Dashboard</NavA>
                     <NavA to='/signin'>Sign In</NavA>
+                    <NavA to='/signup'>Sign Up</NavA>
                 </NavList>
 
                 <Logo>
@@ -139,7 +140,7 @@ export const Home = (props: Props) => {
                 </Logo>
 
                 <AcctDiv>
-                    <AcctLink to='/account'>My Account</AcctLink>
+                    {/* <AcctLink to='/account'>My Account</AcctLink> */}
                 </AcctDiv>
 
             </NavbarContainer>

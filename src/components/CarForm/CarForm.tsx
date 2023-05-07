@@ -1,6 +1,6 @@
 import React from 'react';
-import { useDispatch, useSelector, useStore} from 'react-redux';
-import {useForm} from 'react-hook-form';
+import { useDispatch, useSelector, useStore } from 'react-redux';
+import { useForm } from 'react-hook-form';
 import {
     chooseColor,
     chooseYear,
@@ -16,21 +16,21 @@ import { serverCalls } from '../../api';
 import { useGetData } from '../../custom-hooks';
 
 interface CarFormProps {
-    id?:string;
+    id?: string;
     data?: {}
 }
 
-export const CarForm = (props:CarFormProps) =>{
+export const CarForm = (props: CarFormProps) => {
     const dispatch = useDispatch();
-    let {carData, getData } = useGetData();
+    let { carData, getData } = useGetData();
     const store = useStore();
     // const name = useSelector<carState> (state => state.name)
-    const { register, handleSubmit} = useForm({})
-    
-    const onSubmit = async (data:any, event:any) => {
+    const { register, handleSubmit } = useForm({})
+
+    const onSubmit = async (data: any, event: any) => {
         console.log(props.id)
 
-        if (props.id!){
+        if (props.id!) {
             await serverCalls.update(props.id!, data)
             console.log(`updated: ${data}`)
             window.location.reload()
@@ -50,29 +50,30 @@ export const CarForm = (props:CarFormProps) =>{
     return (
         <div>
             <form onSubmit={handleSubmit(onSubmit)}>
+                <div>
+                    <label htmlFor="vin">VIN</label>
+                    <Input {...register('vin')} name="vin" placeholder="VIN" />
+                </div>
                 <label htmlFor='name'>Car Color</label>
-                <Input {...register('color')} name='color' placeholder='Color'/>
+                <Input {...register('color')} name='color' placeholder='Color' />
                 <div>
                     <label htmlFor="year">Year</label>
-                    <Input {...register('year')} name="year" placeholder="Year"/>
+                    <Input {...register('year')} name="year" placeholder="Year" />
                 </div>
                 <div>
                     <label htmlFor="make">Make</label>
-                    <Input {...register('make')} name="make" placeholder="Make"/>
+                    <Input {...register('make')} name="make" placeholder="Make" />
                 </div>
                 <div>
                     <label htmlFor="model">Model</label>
-                    <Input {...register('model')} name="model" placeholder="Model"/>
+                    <Input {...register('model')} name="model" placeholder="Model" />
                 </div>
-                <div>
-                    <label htmlFor="vin">VIN</label>
-                    <Input {...register('vin')} name="vin" placeholder="VIN"/>
-                </div>
-     
+
+
                 <Button type='submit'>Submit</Button>
             </form>
         </div>
-        
+
     )
 
 }

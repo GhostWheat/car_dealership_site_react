@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import { DataGrid, GridColDef, GridRowSelectionModel } from '@mui/x-data-grid';
-import { serverCalls } from '../../api';
 import { useGetData } from '../../custom-hooks';
+import { serverCalls } from '../../api';
+
 import {
     Button,
     Dialog,
@@ -12,34 +13,36 @@ import {
     DialogTitle
 } from '@mui/material';
 import { CarForm } from '../CarForm'
+import { getAuth } from 'firebase/auth';
+import { AlignHorizontalLeft, FormatAlignJustify } from '@mui/icons-material';
 
 
 const columns: GridColDef[] = [
-    { field: 'vin', headerName: 'VIN', width: 90 },
+    { field: 'vin', headerName: 'VIN', width: 300 },
     {
         field: 'color',
         headerName: 'Color',
-        width: 50,
+        width: 120,
         editable: true,
     },
     {
         field: 'year',
         headerName: 'Year',
-        width: 4,
+        width: 120,
         editable: true,
         type: 'number'
     },
     {
         field: 'make',
         headerName: 'Make',
-        width: 30,
+        width: 120,
         editable: true,
 
     },
     {
         field: 'model',
         headerName: 'Model',
-        width: 160
+        width: 120
     },
 
 ];
@@ -78,7 +81,7 @@ export const DataTable = () => {
     if (MyAuth=="true") {
     return (
         <Box sx={{ height: 400, width: '100%' }}>
-            <h2>Drones in Inventory</h2>
+            <h2>Cars in Inventory</h2>
             <DataGrid
                 rows={carData}
                 columns={columns}
